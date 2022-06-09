@@ -1,0 +1,274 @@
+/*--------------------------------*
+ * Header                         *
+ *--------------------------------*/
+
+/* Header Wrapper */
+.header-wrapper {
+	position: fixed;
+	width: 100vw;
+	z-index: 1;
+	background: rgb(249,252,255);
+	background: linear-gradient(153deg, rgba(249,252,255,1) 0%, rgba(253,254,254,1) 50%, rgba(254,254,254,1) 100%);
+	border-radius: 0 0 50px 50px;
+	right: 0px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Header Logo */
+.header-wrapper > .logo {
+	padding-top: 20px;
+	padding-left: 6%;
+	padding-right: 6%;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.header-wrapper > .logo > .logo-text > .main,
+.header-wrapper > .logo > .logo-text > .main > .colon {
+	font-size: 50px;
+	font-weight: bold;
+	font-family: "DM Serif Text";
+	color: var(--dark);
+}
+.header-wrapper > .logo > .logo-text > .main > .colon {
+	margin-right: 10px;
+	color: var(--red);
+}
+.header-wrapper > .logo > .logo-text > .sub {
+	font-size: 30px;
+	margin-left: 30px;
+	font-family: "DM Serif Text";
+	text-decoration: underline solid var(--red) 3px;
+}
+.header-wrapper > .logo > .logo-contact {
+	font-size: 25px;
+	font-weight: bold;
+	color: var(--dark);
+	font-family: "Taviraj";
+}
+.header-wrapper > .logo > .collapse-button {
+	display: none;
+	border: none;
+	background-color: transparent;
+	margin-right: 20px;
+}
+.header-wrapper > .logo > .collapse-button:hover {
+	cursor: pointer;
+}
+.header-wrapper > .logo > .collapse-button > i{
+	color: var(--dark);
+	font-size: 32px;
+}
+
+/*--------------------------------*
+ * Navigation                     *
+ *--------------------------------*/
+
+/* Header Navigation Bar */
+.header-wrapper > .nav {
+	display: flex;
+	align-items: center;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	padding-left: 6%;
+	padding-right: 6%;
+}
+.header-wrapper > .nav > ul {
+	display: flex;
+	margin-bottom: 10px;
+}
+.header-wrapper > .nav .nav-item {
+	list-style-type: none;
+	display: inline-block;
+}
+.header-wrapper > .nav .nav-item > button {
+	background-color: transparent;
+	color: var(--dark);
+	padding: 8px 30px;
+	font-size: 22px;
+	text-decoration: none;
+	margin-right: 5px;
+	border-radius: 5px;
+	border: none;
+	font-family: "Taviraj";
+}
+.header-wrapper > .nav .nav-item > button.active {
+	background: rgb(57,73,101);
+	background: linear-gradient(45deg, rgba(57,73,101,1) 0%, rgba(36,43,56,1) 50%, rgba(22,21,62,1) 100%);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+
+	color: var(--light) !important;
+	font-weight: bold !important;
+}
+.header-wrapper > .nav .nav-item > :not(.active):hover {
+	text-decoration: underline solid var(--red) 3px;
+	cursor: pointer;
+}
+ 
+/* Mobile Navigation */
+.mobile-nav-wrapper {
+	z-index: 99999;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-right: 20px;
+	width: 350px;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	border-radius: 0 20px 20px 0;
+	transform: translateX(-355px);
+	pointer-events: none;
+	background-color: var(--light);
+}
+.mobile-nav-overlay {
+	z-index: 99998;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.4);
+	opacity: 0;
+	will-change: opacity;
+	pointer-events: none;
+	transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
+}
+.nav-animate {
+	transition: transform 130ms ease-in;
+}
+.nav-animate.nav-show {
+	transition: transform 330ms ease-out;
+}
+
+.mobile-nav-wrapper > .mobile-nav > ul {
+	display: flex;
+	flex-direction: column;
+}
+.mobile-nav-wrapper > .mobile-nav .nav-item {
+	list-style-type: none;
+	display: inline-block;
+}
+.mobile-nav-wrapper > .mobile-nav .nav-item > button {
+	border: none;
+	text-align: start;
+	background: transparent;
+	color: var(--dark);
+	padding: 15px 40px;
+	font-size: 22px;
+	text-decoration: none;
+	font-weight: bold;
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 0 10px 10px 0;
+	font-family: "Taviraj";
+}
+.mobile-nav-wrapper > .mobile-nav .nav-item > button > i {
+	margin-right: 20px;
+	font-size: 22px;
+}
+.mobile-nav-wrapper > .mobile-nav .nav-item > button.active {
+	background: rgb(57,73,101);
+	background: linear-gradient(45deg, rgba(57,73,101,1) 0%, rgba(36,43,56,1) 50%, rgba(22,21,62,1) 100%);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	color: var(--light) !important;
+	font-weight: bold !important;
+}
+.mobile-nav-wrapper > .mobile-nav .nav-item > button.active > i {
+	color: var(--light) !important;
+}
+.mobile-nav-wrapper > .mobile-nav .nav-item > :not(.active):hover {
+	text-decoration: underline solid var(--red) 3px;
+	cursor: pointer;
+}
+
+.mobile-nav-wrapper > .mobile-nav-footer {
+	margin-top: 20px;
+	width: 100%;
+}
+.mobile-nav-wrapper > .mobile-nav-footer > .text {
+	font-size: 26px;
+	font-family: "DM Serif Text";
+	text-decoration: underline solid var(--red) 3px;
+	padding-right: 30px;
+	width: 100%;
+	text-align: end;
+	color: var(--dark);
+}
+.mobile-nav-wrapper > .mobile-nav-footer > .contact {
+	font-size: 18px;
+	padding-right: 30px;
+	margin-top: 10px;
+	width: 100%;
+	text-align: end;
+	font-weight: bold;
+	color: var(--dark);
+	font-family: "Taviraj"
+}
+
+/* Media query for Small Desktop */
+@media only screen and (max-width: 1200px) {
+	/* Remove Logo Info */
+	.header-wrapper {
+		border-radius: 0 0 40px 40px;
+	}
+	.header-wrapper > .logo > .logo-text > .sub {
+		display: none;
+	}
+	
+	/* Reduce Header Logo size */
+	.header-wrapper > .logo > .logo-text > .main,
+	.header-wrapper > .logo > .logo-text > .main > .colon {
+		font-size: 40px;
+	}
+	.header-wrapper > .logo > .logo-contact > span {
+		font-size: 20px;
+	}
+	
+	/* Reduce Navigation size */
+	.header-wrapper > .nav .nav-item > button {
+		font-size: 20px;
+		padding: 6px 23px;
+	}
+}
+
+/* Media query for Smartphone */
+@media only screen and (max-width: 786px) {
+	/* Header Logo */
+	.header-wrapper {
+		border-radius: 0 0 50px 50px;
+	}
+	.header-wrapper > .logo {
+		padding: 15px 30px;
+		justify-content: start;
+	}
+	.header-wrapper > .logo > .logo-text > .main,
+	.header-wrapper > .logo > .logo-text > .main > .colon {
+		font-size: 32px;
+	}
+	.header-wrapper > .logo > .logo-contact {
+		display: none;
+	}
+	.header-wrapper > .logo > .collapse-button {
+		display: block;
+		font-size: 25px;
+	}
+	
+	/* Mobile Navigation */
+	.mobile-nav-wrapper {
+		display: block;
+	}
+	.nav-show {
+		-webkit-transform: none;
+		transform: none;
+		pointer-events: auto;
+	}
+	.nav-overlay-show.mobile-nav-overlay {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	/* Remove Desktop Navigation */
+	.header-wrapper > .nav {
+		display: none;
+	}
+}

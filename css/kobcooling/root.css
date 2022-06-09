@@ -1,0 +1,36 @@
+/*--------------------------------*
+ * Root                           *
+ *--------------------------------*/
+
+:root {
+	--dark: #242B38;
+	--dark-gray: #343F50;
+	--light: #FEFFFE;
+	--light-gray: #E3E3E3;
+	--red: #FE3365;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background: rgb(42, 54, 75);
+	background: linear-gradient(45deg, rgba(42, 54, 75, 1) 0%, rgba(36, 43, 56, 1) 50%, rgba(22, 21, 62, 1) 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow-y: scroll;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	background: #343F50;
+}
+::-webkit-scrollbar-thumb {
+	background: rgb(187, 39, 157);
+	background: linear-gradient(45deg, rgba(187, 39, 157, 0.8) 0%, rgba(255, 95, 95, 0.8) 50%, rgba(241, 150, 69, 0.8) 100%);
+}
