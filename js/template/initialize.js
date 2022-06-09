@@ -1,10 +1,26 @@
 // Cache
-let pageCache = new Array();
+let pageCache = new Array()
 
-// Load default page (Home)
-let xhttp = new XMLHttpRequest()
+// Page now
+let pages = [
+	"home", "products", "services",
+	"works", "contact"
+]
 
-xhttp.onload = () => pageCache["home"] = xhttp.responseText
-xhttp.open("GET", "/contents/home.html")
+// Load default page
+let pathname = "home"
+if (localStorage.pathnameRequest !== undefined) {
+	pathname = localStorage.pathnameRequest.replace("/", "")
+	localStorage.removeItem("pathnameRequest")
+}
+window.history.pushState({}, null, pathname);
+
+if (!pages.includes(pathname)) {
+	pathname = "error"
+}
+
+let xhttp = new XMLHttpRequest();
+xhttp.onload = () => pageCache[pathname] = xhttp.responseText
+xhttp.open("GET", "/contents/" + pathname + ".html")
 xhttp.send()
 

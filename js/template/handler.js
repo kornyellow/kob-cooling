@@ -44,6 +44,8 @@ let addRedirectEvent = (elements) => {
 			if (mainBody.classList.contains("animate"))
 				return
 
+			window.history.pushState({}, null, element.classList[0]);
+
 			toggleActive(lastActive)
 			lastActive = toggleActive(elements)
 
@@ -70,4 +72,4 @@ let toggleActive = (elements) => {
 }
 
 let lastActive = toggleActive(homeButtons)
-loadPage("home")
+loadPage(pathname)
