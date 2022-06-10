@@ -84,25 +84,6 @@
 	text-align: start;
 }
 
-/*--------------------------------*
- * Footer                         *
- *--------------------------------*/
-
-.footer {
-	margin-top: 10px;
-	display: flex;
-	justify-content: end;
-}
-.footer > div {
-	color: var(--light);
-	font-size: 18px;
-	font-weight: bold;
-	font-family: "Taviraj";
-}
-.footer > div > a {
-	color: var(--red);
-}
-
 /* Media query for Small Desktop */
 @media only screen and (max-width: 1200px) {
 	/* Cooling type */
@@ -145,10 +126,5 @@
 	}
 	.cooling-type > article > div {
 		padding: 15px 20px;
-	}
-
-	/* Footer */
-	.footer > div {
-		font-size: 12px;
 	}
 }

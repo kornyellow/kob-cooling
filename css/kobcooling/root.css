@@ -16,16 +16,15 @@
 	box-sizing: border-box;
 }
 body {
-	background: rgb(42, 54, 75);
-	background: linear-gradient(45deg, rgba(42, 54, 75, 1) 0%, rgba(36, 43, 56, 1) 50%, rgba(22, 21, 62, 1) 100%);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background: rgba(36, 43, 56, 1);
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
 	width: 5px;
+	height: 5px;
 }
 ::-webkit-scrollbar-track {
 	background: #343F50;

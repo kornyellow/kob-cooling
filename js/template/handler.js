@@ -6,12 +6,10 @@ let loadPage = (file) => {
 	}
 
 	let xhttp = new XMLHttpRequest()
-
 	xhttp.onload = () => {
 		pageCache[file] = xhttp.responseText
 		mainBody.innerHTML = xhttp.responseText
 	}
-
 	xhttp.open("GET", "/contents/" + file + ".html", true)
 	xhttp.send()
 }
@@ -44,8 +42,6 @@ let addRedirectEvent = (elements) => {
 			if (mainBody.classList.contains("animate"))
 				return
 
-			window.history.pushState({}, null, element.classList[0]);
-
 			toggleActive(lastActive)
 			lastActive = toggleActive(elements)
 
@@ -72,4 +68,4 @@ let toggleActive = (elements) => {
 }
 
 let lastActive = toggleActive(homeButtons)
-loadPage(pathname)
+loadPage("home")

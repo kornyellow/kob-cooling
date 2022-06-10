@@ -41,6 +41,34 @@
 }
 
 /*--------------------------------*
+ * Footer                         *
+ *--------------------------------*/
+
+.footer {
+	background: rgb(42, 54, 75);
+	background: linear-gradient(45deg, rgba(42, 54, 75, 1) 0%, rgba(36, 43, 56, 1) 50%, rgba(22, 21, 62, 1) 100%);
+	bottom: 0;
+	position: fixed;
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+.footer > div {
+	padding-top: 6px;
+	padding-bottom: 4px;
+	padding-right: 20px;
+	padding-left: 20px;
+	color: var(--light);
+	font-weight: bold;
+	font-family: "Taviraj";
+	font-size: 18px;
+}
+.footer > div > a {
+	color: var(--red);
+}
+
+/*--------------------------------*
  * Typography                     *
  *--------------------------------*/
 
@@ -95,6 +123,11 @@ p {
 	}
 	.main-body {
 		padding: 3% 4%;
+	}
+
+	/* Footer */
+	.footer > div {
+		font-size: 12px;
 	}
 
 	/* Reduce font size */
