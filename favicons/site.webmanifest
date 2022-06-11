@@ -1,0 +1,34 @@
+{
+	"dir": "ltr",
+	"lang": "th",
+	"name": "kobcooling บริการคูลลิ่งทาวเวอร์",
+	"short_name": "kobcooling",
+	"categories": ["business", "lifestyle", "utilities"],
+	"description": "จำหน่าย ออกแบบ ผลิต ติดตั้ง Cooling Tower ทุกแบบ คุณภาพมาตรฐาน โดยวิศวกรผู้เชี่ยวชาญ ทีมงานของเรายินดี เข้าไปตรวจเช็คที่หน้างาน ประเมินราคาฟรี พร้อมบริการหลังการขาย",
+
+	"start_url": "/",
+	"scope": "/"
+	"shortcuts": [
+		{"name": "สินค้าคูลลิ่งทาวเวอร์", "url": "/products", "icons": [{"src": "/favicons/favicon-96.png", "type": "image/png", "sizes": "96x96"}]},
+		{"name": "บริการคูลลิ่งทาวเวอร์", "url": "/services", "icons": [{"src": "/favicons/favicon-96.png", "type": "image/png", "sizes": "96x96"}]},
+		{"name": "ผลงานของเรา", "url": "/works", "icons": [{"src": "/favicons/favicon-96.png", "type": "image/png", "sizes": "96x96"}]},
+		{"name": "ติดต่อเรา", "url": "/contact", "icons": [{"src": "/favicons/favicon-96.png", "type": "image/png", "sizes": "96x96"}]}
+	],
+
+	"display": "standalone",
+
+	"orientation": "natural",
+	"theme_color": "#FFFFFF",
+	"background_color": "#242B38",
+	"screenshots": [
+
+	],
+	"icons": [
+		{"src": "/favicons/favicon-16.png", "type": "image/png", "sizes": "16x16"},
+		{"src": "/favicons/favicon-32.png", "type": "image/png", "sizes": "32x32"},
+		{"src": "/favicons/favicon-96.png", "type": "image/png", "sizes": "96x96"},
+		{"src": "/favicons/favicon-192.png", "type": "image/png", "sizes": "192x192"},
+		{"src": "/favicons/favicon-512.png", "type": "image/png", "sizes": "512x512"}
+	]
+}
+

@@ -1,4 +1,56 @@
 /*--------------------------------*
+ * Main                           *
+ *--------------------------------*/
+
+/* Main Body */
+.main-body {
+	position: relative;
+	top: 188px;
+	padding: 25px 3%;
+	display: flex;
+	flex-direction: column;
+	opacity: 1;
+}
+.main-body > section {
+	margin: 10px 0;
+}
+.main-body.animate {
+	transition: opacity 0.2s ease-in;
+}
+.main-body.hide {
+	opacity: 0 !important;
+}
+
+/* Section */
+.section {
+	color: var(--dark);
+	background: rgb(249,252,255);
+	background: linear-gradient(153deg, rgba(249,252,255,1) 0%, rgba(253,254,254,1) 50%, rgba(254,254,254,1) 100%);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+.section {
+	text-align: center;
+	padding: 40px 4%;
+}
+.section > h2 {
+	color: var(--dark);
+}
+.section > h2 > i {
+	margin-right: 0.6em;
+}
+
+/* Images */
+.img {
+	padding: 0;
+	margin: 0;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	object-fit: cover;
+}
+
+/*--------------------------------*
  * Header                         *
  *--------------------------------*/
 
@@ -11,7 +63,7 @@
 	background: linear-gradient(153deg, rgba(249,252,255,1) 0%, rgba(253,254,254,1) 50%, rgba(254,254,254,1) 100%);
 	border-radius: 0 0 50px 50px;
 	right: 0px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 1);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Header Logo */
@@ -49,15 +101,14 @@
 .header-wrapper > .logo > .collapse-button {
 	display: none;
 	border: none;
-	background-color: transparent;
 	margin-right: 20px;
+	background: transparent;
 }
 .header-wrapper > .logo > .collapse-button:hover {
 	cursor: pointer;
 }
-.header-wrapper > .logo > .collapse-button > i{
-	color: var(--dark);
-	font-size: 32px;
+.header-wrapper > .logo > .collapse-button > img {
+	height: fit-content;
 }
 
 /*--------------------------------*
@@ -81,7 +132,7 @@
 	list-style-type: none;
 	display: inline-block;
 }
-.header-wrapper > .nav .nav-item > button {
+.header-wrapper > .nav .nav-item > a {
 	background-color: transparent;
 	color: var(--dark);
 	padding: 8px 30px;
@@ -91,8 +142,9 @@
 	border-radius: 5px;
 	border: none;
 	font-family: "Taviraj";
+	cursor: pointer;
 }
-.header-wrapper > .nav .nav-item > button.active {
+.header-wrapper > .nav .nav-item > a.active {
 	background: rgb(57,73,101);
 	background: linear-gradient(45deg, rgba(57,73,101,1) 0%, rgba(36,43,56,1) 50%, rgba(22,21,62,1) 100%);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -102,7 +154,6 @@
 }
 .header-wrapper > .nav .nav-item > :not(.active):hover {
 	text-decoration: underline solid var(--red) 3px;
-	cursor: pointer;
 }
  
 /* Mobile Navigation */
@@ -148,7 +199,8 @@
 	list-style-type: none;
 	display: inline-block;
 }
-.mobile-nav-wrapper > .mobile-nav .nav-item > button {
+.mobile-nav-wrapper > .mobile-nav .nav-item > a {
+	display: inline-block;
 	border: none;
 	text-align: start;
 	background: transparent;
@@ -162,23 +214,23 @@
 	border-radius: 0 10px 10px 0;
 	font-family: "Taviraj";
 }
-.mobile-nav-wrapper > .mobile-nav .nav-item > button > i {
+.mobile-nav-wrapper > .mobile-nav .nav-item > a > i {
 	margin-right: 20px;
 	font-size: 22px;
 }
-.mobile-nav-wrapper > .mobile-nav .nav-item > button.active {
+.mobile-nav-wrapper > .mobile-nav .nav-item > a.active {
 	background: rgb(57,73,101);
 	background: linear-gradient(45deg, rgba(57,73,101,1) 0%, rgba(36,43,56,1) 50%, rgba(22,21,62,1) 100%);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 	color: var(--light) !important;
 	font-weight: bold !important;
+	cursor: pointer;
 }
-.mobile-nav-wrapper > .mobile-nav .nav-item > button.active > i {
+.mobile-nav-wrapper > .mobile-nav .nav-item > a.active > i {
 	color: var(--light) !important;
 }
 .mobile-nav-wrapper > .mobile-nav .nav-item > :not(.active):hover {
 	text-decoration: underline solid var(--red) 3px;
-	cursor: pointer;
 }
 
 .mobile-nav-wrapper > .mobile-nav-footer {
@@ -205,8 +257,74 @@
 	font-family: "Taviraj"
 }
 
+/*--------------------------------*
+ * Footer                         *
+ *--------------------------------*/
+
+.footer {
+	background: rgb(42, 54, 75);
+	background: linear-gradient(45deg, rgba(42, 54, 75, 1) 0%, rgba(36, 43, 56, 1) 50%, rgba(22, 21, 62, 1) 100%);
+	bottom: 0;
+	position: fixed;
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+.footer > div {
+	padding-top: 6px;
+	padding-bottom: 4px;
+	padding-right: 20px;
+	padding-left: 20px;
+	color: var(--light);
+	font-weight: bold;
+	font-family: "Taviraj";
+	font-size: 18px;
+}
+.footer > div > a {
+	color: var(--red);
+}
+
+/*--------------------------------*
+ * Typography                     *
+ *--------------------------------*/
+
+/* Text */
+h1 {
+	display: flex;
+	align-items: center;
+	font-size: 60px;
+	font-weight: bold;
+	font-family: "Taviraj";
+}
+h2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: "Taviraj";
+}
+h3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "Taviraj";
+}
+p {
+	font-size: 20px;
+	font-family: "Kanit";
+}
+
 /* Media query for Small Desktop */
 @media only screen and (max-width: 1200px) {
+	/* Main body */
+	.main-body {
+		top: 165px;
+	}
+
 	/* Remove Logo Info */
 	.header-wrapper {
 		border-radius: 0 0 40px 40px;
@@ -225,14 +343,36 @@
 	}
 	
 	/* Reduce Navigation size */
-	.header-wrapper > .nav .nav-item > button {
+	.header-wrapper > .nav .nav-item > a {
 		font-size: 20px;
 		padding: 6px 23px;
+	}
+
+	/* Reduce Cover font size */
+	h1 {
+		font-size: 50px;
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 26px;
+	}
+	p {
+		font-size: 18px;
 	}
 }
 
 /* Media query for Smartphone */
 @media only screen and (max-width: 786px) {
+	/* Main body */
+	.main-body {
+		top: 76px;
+	}
+	.main-body {
+		padding: 3% 4%;
+	}
+
 	/* Header Logo */
 	.header-wrapper {
 		border-radius: 0 0 50px 50px;
@@ -249,7 +389,7 @@
 		display: none;
 	}
 	.header-wrapper > .logo > .collapse-button {
-		display: block;
+		display: flex;
 		font-size: 25px;
 	}
 	
@@ -267,8 +407,27 @@
 		pointer-events: auto;
 	}
 
+	/* Footer */
+	.footer > div {
+		font-size: 12px;
+	}
+
 	/* Remove Desktop Navigation */
 	.header-wrapper > .nav {
 		display: none;
+	}
+
+	/* Reduce font size */
+	h1 {
+		font-size: 35px;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	p {
+		font-size: 14px;
 	}
 }
