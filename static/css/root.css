@@ -4,27 +4,28 @@
 
 :root {
 	--dark: #242B38;
-	--dark-gray: #343F50;
 	--light: #FEFFFE;
-	--light-gray: #E3E3E3;
 	--red: #FE3365;
+	--dark-gray: #343F50;
+	--light-gray: #E3E3E3;
 }
 
 * {
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 body {
 	background: var(--dark);
-	overflow-y: scroll;
 	overflow-x: hidden;
+	overflow-y: scroll;
+	user-select: none;
 }
 
 .icon {
 	color: var(--light);
-	width: 1em;
 	height: 1em;
+	width: 1em;
 }
 .icon-dark {
 	filter: invert(13%) sepia(10%) saturate(1807%) hue-rotate(181deg) brightness(94%) contrast(88%);
@@ -36,11 +37,18 @@ body {
 	margin-right: 0.5em;
 }
 
+a:link {;
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-	width: 5px;
 	height: 5px;
+	width: 5px;
 }
 ::-webkit-scrollbar-track {
 	background: #343F50;
