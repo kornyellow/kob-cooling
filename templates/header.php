@@ -2,12 +2,11 @@
 
 namespace templates;
 
-use libraries\methods\KornHeader;
+use libraries\cooling\CoolingHeader;
 
-$title       = KornHeader::getTitle();
-$abstract    = KornHeader::getAbstract();
-$description = KornHeader::getDescription();
-
+$title       = CoolingHeader::getTitle();
+$abstract    = CoolingHeader::getAbstract();
+$description = CoolingHeader::getDescription();
 ?>
 
 <!DOCTYPE html>
@@ -75,6 +74,7 @@ $description = KornHeader::getDescription();
 			<li class="nav-item"><a class="js-nav-button" href="/home" title="หน้าหลัก">หน้าหลัก</a></li>
 			<li class="nav-item"><a class="js-nav-button" href="/products" title="สินค้า">สินค้า</a></li>
 			<li class="nav-item"><a class="js-nav-button" href="/services" title="บริการ">บริการ</a></li>
+			<li class="nav-item"><a class="js-nav-button" href="/system" title="งานระบบ">งานระบบ</a></li>
 			<li class="nav-item"><a class="js-nav-button" href="/works" title="ผลงาน">ผลงาน</a></li>
 			<li class="nav-item"><a class="js-nav-button" href="/contact" title="ติดต่อเรา">ติดต่อเรา</a></li>
 		</ul>
@@ -97,6 +97,11 @@ $description = KornHeader::getDescription();
 			<li class="nav-item">
 				<a class="js-nav-button" href="/services" title="บริการ">
 					<img class="icon icon-dark icon-margin" src="/static/svgs/screwdriver-wrench.svg" alt="ไอคอนหน้าหลัก">บริการ
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="js-nav-button" href="/system" title="งานระบบ">
+					<img class="icon icon-dark icon-margin" src="/static/svgs/screwdriver-wrench.svg" alt="ไอคอนงานระบบ">งานระบบ
 				</a>
 			</li>
 			<li class="nav-item">

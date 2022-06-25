@@ -1,6 +1,6 @@
 <?php
 
-namespace libraries\methods\utils;
+namespace libraries\korn;
 
 use JetBrains\PhpStorm\NoReturn;
 
