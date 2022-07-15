@@ -15,7 +15,7 @@
 	margin: 0;
 	padding: 0;
 }
-body {
+html {
 	background: var(--dark);
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -37,7 +37,12 @@ body {
 	margin-right: 0.5em;
 }
 
-a:link {;
+a {
+	color: var(--light);
+	text-decoration: underline solid var(--light) 2px;
+}
+
+a.link {
 	text-decoration: none;
 }
 
@@ -56,4 +61,17 @@ a:visited {
 ::-webkit-scrollbar-thumb {
 	background: rgb(187, 39, 157);
 	background: linear-gradient(45deg, rgba(187, 39, 157, 0.8) 0%, rgba(255, 95, 95, 0.8) 50%, rgba(241, 150, 69, 0.8) 100%);
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	img {
+		transition: transform 200ms;
+	}
+
+	img:hover {
+		cursor: pointer;
+		transform: scale(1.01);
+		transition: transform 200ms;
+	}
 }

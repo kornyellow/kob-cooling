@@ -13,15 +13,17 @@ date_default_timezone_set('Asia/Bangkok');
 // Libraries for autoload classes
 include('vendor/autoload.php');
 
+// Start Sessions
+session_start();
+
 // Find requested path
 $currentDomainURL = KornNetwork::getCurrentDomainURL();
 
 $requestPath  = KornNetwork::getRequestPath();
 $absolutePath = KornNetwork::getAbsolutePath($requestPath);
-if ($requestPath != $absolutePath)
+if ($requestPath != $absolutePath) {
 	KornNetwork::redirectPage($currentDomainURL.'/'.$absolutePath);
-if (empty($absolutePath))
-	KornNetwork::redirectPage($currentDomainURL.'/home');
+}
 
 // Preventing user from accessing direct index.php
 if (str_ends_with($absolutePath, 'index.php')) {

@@ -5,6 +5,29 @@ namespace libraries\korn;
 use JetBrains\PhpStorm\NoReturn;
 
 class KornNetwork {
+	private static string $header;
+	private static string $description;
+	private static string $abstract;
+	
+	public static function getHeader(): string {
+		return self::$header;
+	}
+	public static function setHeader(string $header): void {
+		self::$header = $header;
+	}
+	public static function getDescription(): string {
+		return self::$description;
+	}
+	public static function setDescription(string $description): void {
+		self::$description = $description;
+	}
+	public static function getAbstract(): string {
+		return self::$abstract;
+	}
+	public static function setAbstract(string $abstract): void {
+		self::$abstract = $abstract;
+	}
+	
 	public static function getRequestPath(): string {
 		$requestURI = $_SERVER['REQUEST_URI'];
 		if($requestURI == '/')
@@ -63,7 +86,7 @@ class KornNetwork {
 		return $_SERVER['REMOTE_ADDR'];
 	}
 	#[NoReturn] public static function redirectPage($url, $delay = 0): void {
-		echo '<meta http-equiv="refresh" content="'.$delay.'; url = '.$url.'" />';
+		echo '<meta http-equiv="refresh" content="'.$delay.'" url = "'.$url.'" />';
 		exit;
 	}
 }

@@ -18,9 +18,9 @@ class CoolingHeader {
 	}
 	
 	public static function constructHeader($title = null, $description = null, $abstract = null): void {
-		if ($title != null) CoolingHeader::$title = $title;
-		if ($description != null) CoolingHeader::$description = $description;
-		if ($abstract != null) CoolingHeader::$abstract = $abstract;
+		if ($title != null) self::$title = $title;
+		if ($description != null) self::$description = $description;
+		if ($abstract != null) self::$abstract = $abstract;
 		
 		include('templates/header.php');
 	}

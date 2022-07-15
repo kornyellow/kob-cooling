@@ -40,6 +40,8 @@ $description = CoolingHeader::getDescription();
 
 	<link rel="stylesheet" href="/static/css/home.css">
 	<link rel="stylesheet" href="/static/css/services.css">
+	<link rel="stylesheet" href="/static/css/chemical.css">
+	<link rel="stylesheet" href="/static/css/works.css">
 	<link rel="stylesheet" href="/static/css/contact.css">
 
 	<!-- Favicon -->
@@ -74,7 +76,7 @@ $description = CoolingHeader::getDescription();
 			<li class="nav-item"><a class="js-nav-button" href="/home" title="หน้าหลัก">หน้าหลัก</a></li>
 			<li class="nav-item"><a class="js-nav-button" href="/products" title="สินค้า">สินค้า</a></li>
 			<li class="nav-item"><a class="js-nav-button" href="/services" title="บริการ">บริการ</a></li>
-			<li class="nav-item"><a class="js-nav-button" href="/system" title="งานระบบ">งานระบบ</a></li>
+			<li class="nav-item"><a class="js-nav-button" href="/chemical" title="เคมีภัณฑ์">เคมีภัณฑ์</a></li>
 			<li class="nav-item"><a class="js-nav-button" href="/works" title="ผลงาน">ผลงาน</a></li>
 			<li class="nav-item"><a class="js-nav-button" href="/contact" title="ติดต่อเรา">ติดต่อเรา</a></li>
 		</ul>
@@ -100,8 +102,8 @@ $description = CoolingHeader::getDescription();
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="js-nav-button" href="/system" title="งานระบบ">
-					<img class="icon icon-dark icon-margin" src="/static/svgs/screwdriver-wrench.svg" alt="ไอคอนงานระบบ">งานระบบ
+				<a class="js-nav-button" href="/chemical" title="เคมีภัณฑ์">
+					<img class="icon icon-dark icon-margin" src="/static/svgs/flask-vial.svg" alt="ไอคอนเคมีภัณฑ์">เคมีภัณฑ์
 				</a>
 			</li>
 			<li class="nav-item">
