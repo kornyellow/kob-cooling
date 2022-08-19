@@ -8,25 +8,26 @@
 	flex-direction: column;
 	margin-inline: auto;
 	opacity: 1;
-	padding: 25px 0;
 	position: relative;
-	top: 188px;
-	width: 1100px;
+	top: 70px;
+	width: 100%;
 }
 .main-body > section {
-	margin: 10px 0;
+	margin: 0.4rem 0;
 }
 
 /* Section */
-.section {
-	background: rgb(249, 252, 255);
-	background: linear-gradient(153deg, rgba(249, 252, 255, 1) 0%, rgba(253, 254, 254, 1) 50%, rgba(254, 254, 254, 1) 100%);
-	border-radius: 8px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 1);
-	color: var(--dark);
+.section-header {
+	background-color: var(--light);
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	position: relative;
 }
+.section-header {
+}
+
 .section {
-	padding: 40px 4%;
 	text-align: center;
 }
 .section > p {
@@ -42,14 +43,6 @@
 }
 
 /* Images */
-.img {
-	border-radius: 10px;
-	margin: 0;
-	object-fit: cover;
-	overflow: hidden;
-	padding: 0;
-	position: relative;
-}
 
 /*--------------------------------*
  * Header                         *
@@ -57,59 +50,52 @@
 
 /* Header Wrapper */
 .header-wrapper {
-	background: rgb(249, 252, 255);
-	background: linear-gradient(153deg, rgba(249, 252, 255, 1) 0%, rgba(253, 254, 254, 1) 50%, rgba(254, 254, 254, 1) 100%);
-	border-radius: 0 0 50px 50px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+	background: var(--light);
 	position: fixed;
+	width: 100%;
 	right: 0;
-	width: 100vw;
 	z-index: 1;
 }
 
 /* Header Logo */
-.header-wrapper > .logo {
-	align-items: baseline;
+.logo {
 	display: flex;
-	justify-content: space-between;
+	align-items: baseline;
+	justify-content: left;
 	margin: auto;
-	padding-top: 20px;
-	width: 1100px;
+	padding: 0.5rem 1rem;
 }
-.header-wrapper > .logo > .logo-text > .main,
-.header-wrapper > .logo > .logo-text > .main > .colon {
+.logo-text > .main {
 	color: var(--dark);
-	font-family: "DM Serif Text", serif;
-	font-size: 50px;
-	font-weight: bold;
+	font-size: 2rem;
+	font-style: italic;
+	font-weight: 500;
 }
-.header-wrapper > .logo > .logo-text > .main > .colon {
-	color: var(--red);
-	margin-right: 10px;
-}
-.header-wrapper > .logo > .logo-text > .sub {
+.logo-text > .sub {
+	display: none;
 	color: var(--dark);
-	font-family: "DM Serif Text", serif;
-	font-size: 30px;
-	margin-left: 30px;
-	text-decoration: underline solid var(--red) 3px;
+	font-size: 1.2rem;
+	margin-left: 0.5rem;
+	font-weight: 400;
+	font-style: italic;
 }
-.header-wrapper > .logo > .logo-contact {
+.logo-contact {
+	display: none;
 	color: var(--dark);
-	font-family: "Taviraj", serif;
-	font-size: 25px;
-	font-weight: bold;
+	font-size: 1rem;
+	font-weight: 400;
 }
-.header-wrapper > .logo > .collapse-button {
+.collapse-button {
 	background: transparent;
 	border: none;
-	display: none;
-	margin-right: 20px;
+	font-size: 1.4rem;
+	padding-top: 0.8rem;
+	margin-right: 2rem;
 }
-.header-wrapper > .logo > .collapse-button:hover {
+.collapse-button:hover {
 	cursor: pointer;
 }
-.header-wrapper > .logo > .collapse-button > img {
+.collapse-button > img {
 	height: fit-content;
 }
 
@@ -118,35 +104,31 @@
  *--------------------------------*/
 
 /* Header Navigation Bar */
-.header-wrapper > .nav {
+.header-wrapper > nav {
 	align-items: center;
-	display: flex;
+	display: none;
 	margin-inline: auto;
-	padding-bottom: 10px;
-	padding-top: 25px;
 	width: 1100px;
 }
-.header-wrapper > .nav > ul {
+.header-wrapper > nav > ul {
 	display: flex;
 	margin-bottom: 10px;
 }
-.header-wrapper > .nav .nav-item {
+.header-wrapper > nav .nav-item {
 	display: inline-block;
 	list-style-type: none;
 }
-.header-wrapper > .nav .nav-item > a {
+.header-wrapper > nav .nav-item > a {
 	background-color: transparent;
 	border: none;
 	border-radius: 5px;
 	color: var(--dark);
 	cursor: pointer;
-	font-family: "Taviraj", serif;
-	font-size: 22px;
-	margin-right: 5px;
+	font-size: 1rem;
 	padding: 8px 30px;
 	text-decoration: none;
 }
-.header-wrapper > .nav .nav-item > a.active {
+.header-wrapper > nav .nav-item > a.active {
 	background: rgb(57, 73, 101);
 	background: linear-gradient(45deg, rgba(57, 73, 101, 1) 0%, rgba(36, 43, 56, 1) 50%, rgba(22, 21, 62, 1) 100%);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -155,7 +137,6 @@
 	font-weight: bold !important;
 }
 .header-wrapper > .nav .nav-item > :not(.active):hover {
-	text-decoration: underline solid var(--red) 3px;
 }
 
 /* Mobile Navigation */
@@ -207,7 +188,6 @@
 	border-radius: 0 10px 10px 0;
 	color: var(--dark);
 	display: flex;
-	font-family: "Taviraj", serif;
 	font-size: 22px;
 	font-weight: bold;
 	margin-bottom: 10px;
@@ -236,7 +216,6 @@
 	color: var(--light) !important;
 }
 .mobile-nav-wrapper > .mobile-nav .nav-item > :not(.active):hover {
-	text-decoration: underline solid var(--red) 3px;
 }
 
 .mobile-nav-wrapper > .mobile-nav-footer {
@@ -245,16 +224,13 @@
 }
 .mobile-nav-wrapper > .mobile-nav-footer > .text {
 	color: var(--dark);
-	font-family: "DM Serif Text", serif;
 	font-size: 26px;
 	padding-right: 30px;
 	text-align: end;
-	text-decoration: underline solid var(--red) 3px;
 	width: 100%;
 }
 .mobile-nav-wrapper > .mobile-nav-footer > .contact {
 	color: var(--dark);
-	font-family: "Taviraj", serif;
 	font-size: 18px;
 	font-weight: bold;
 	margin-top: 10px;
@@ -279,7 +255,6 @@
 }
 .footer > div {
 	color: var(--light);
-	font-family: "Taviraj", serif;
 	font-size: 18px;
 	font-weight: bold;
 	margin-inline: auto;
@@ -291,184 +266,25 @@
 	color: var(--red);
 }
 .footer > div > a:hover {
-	text-decoration: underline solid var(--red) 1px;
 }
 
-/*--------------------------------*
- * Typography                     *
- *--------------------------------*/
-
-/* Text */
-h1 {
-	align-items: center;
-	display: flex;
-	font-family: "Taviraj", serif;
-	font-size: 40px;
-	font-weight: bold;
-}
-h2 {
-	align-items: center;
-	display: flex;
-	font-family: "Taviraj", serif;
-	font-size: 32px;
-	font-weight: bold;
-	justify-content: center;
-}
-h3 {
-	align-items: center;
-	display: flex;
-	font-family: "Taviraj", serif;
-	font-size: 22px;
-	font-weight: bold;
-	justify-content: center;
-}
-p {
-	font-family: "Kanit", serif;
-	font-size: 18px;
-}
-
-/* Media query for Small Desktop */
-@media only screen and (max-width: 1200px) {
-	/* Main body */
-	.main-body {
-		padding-inline: 20px;
-		top: 165px;
-		width: 100%;
-	}
-
-	/* Remove Logo Info */
-	.header-wrapper {
-		border-radius: 0 0 40px 40px;
-	}
-
-	.header-wrapper > .logo {
-		padding-inline: 40px;
-		width: 100%;
-	}
-
-	.header-wrapper > .logo > .logo-text > .sub {
+/* Tablet */
+@media only screen and (min-width: 768px) {
+	.collapse-button {
 		display: none;
 	}
-
-	/* Reduce Header Logo size */
-	.header-wrapper > .logo > .logo-text > .main,
-	.header-wrapper > .logo > .logo-text > .main > .colon {
-		font-size: 40px;
-	}
-
-	.header-wrapper > .logo > .logo-contact > span {
-		font-size: 20px;
-	}
-
-	/* Reduce Navigation size */
-	.header-wrapper > .nav {
-		padding-inline: 40px;
-		width: 100%;
-	}
-
-	.header-wrapper > .nav .nav-item > a {
-		font-size: 20px;
-		padding: 6px 23px;
-	}
-
-	/* Reduce Footer size */
-	.footer > div {
-		width: 100%;
-	}
-
-	/* Reduce Cover font size */
-	h1 {
-		font-size: 34px;
-	}
-
-	h2 {
-		font-size: 28px;
-	}
-
-	h3 {
-		font-size: 22px;
-	}
-
-	p {
-		font-size: 18px;
+	.logo-text .sub {
+		display: inline-block;
 	}
 }
 
-/* Media query for Smartphone */
-@media only screen and (max-width: 786px) {
-	/* Main body */
-	.main-body {
-		top: 76px;
+/* Desktop */
+@media only screen and (min-width: 1100px) {
+	.logo {
+		width: 1100px;
+		justify-content: space-between;
 	}
-
-	.main-body {
-		padding: 3% 4%;
-	}
-
-	/* Header Logo */
-	.header-wrapper {
-		border-radius: 0 0 50px 50px;
-	}
-
-	.header-wrapper > .logo {
-		justify-content: start;
-		padding: 15px 30px;
-	}
-
-	.header-wrapper > .logo > .logo-text > .main,
-	.header-wrapper > .logo > .logo-text > .main > .colon {
-		font-size: 32px;
-	}
-
-	.header-wrapper > .logo > .logo-contact {
-		display: none;
-	}
-
-	.header-wrapper > .logo > .collapse-button {
-		display: flex;
-		font-size: 25px;
-	}
-
-	/* Mobile Navigation */
-	.mobile-nav-wrapper {
+	.logo-contact {
 		display: block;
-	}
-
-	.nav-show {
-		pointer-events: auto;
-		-webkit-transform: none;
-		transform: none;
-	}
-
-	.nav-overlay-show.mobile-nav-overlay {
-		opacity: 1;
-		pointer-events: auto;
-	}
-
-	/* Footer */
-	.footer > div {
-		font-size: 12px;
-	}
-
-	/* Remove Desktop Navigation */
-	.header-wrapper > .nav {
-		display: none;
-	}
-
-	/* Reduce font size */
-	h1 {
-		font-size: 35px;
-	}
-
-	h2 {
-		font-size: 26px;
-	}
-
-	h3 {
-		font-size: 20px;
-	}
-
-	p {
-		font-size: 14px;
 	}
 }

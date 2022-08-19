@@ -7,6 +7,12 @@ use libraries\cooling\CoolingHeader;
 $title       = CoolingHeader::getTitle();
 $abstract    = CoolingHeader::getAbstract();
 $description = CoolingHeader::getDescription();
+
+if ($title !== 'หน้าหลัก') {
+	$title.= ' · คูลลิ่งทาวเวอร์';
+} else {
+	$title = 'คูลลิ่งทาวเวอร์';
+}
 ?>
 
 <!DOCTYPE html>
@@ -16,11 +22,11 @@ $description = CoolingHeader::getDescription();
 	<!-- Metas -->
 	<meta charset="utf-8">
 
-	<title><?php echo $title ?> - คูลลิ่งทาวเวอร์</title>
+	<title><?php echo $title ?></title>
 
-	<meta name="title" content="<?php echo $title ?> - กบคูลลิ่งทาวเวอร์ และบริการ">
+	<meta name="title" content="<?php echo $title ?> · กบคูลลิ่งทาวเวอร์ และบริการ">
 	<meta name="author" content="สุคนธ์ สุโขพล (กบ)">
-	<meta name="owner" content="kornkubzaza@gmail.com (กร)">
+	<meta name="owner" content="kornkubzaza@gmail.com">
 
 	<meta name="keywords" content="คูลลิ่งทาวเวอร์,คูลลิ่งทาวเวอร์ทรงกลม ทรงเหลี่ยม,หอระบายความร้อน,ติดตั้งเครื่องคูลลิ่งทาวเวอร์,ซ่อมคูลลิ่งทาวเวอร์,ระบบหล่อเย็น ระบบระบายความร้อน,กบคูลลิ่ง,กบ,กรุงเทพมหานคร">
 	<meta name="abstract" content="<?php echo $abstract ?>">
@@ -30,19 +36,17 @@ $description = CoolingHeader::getDescription();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Font -->
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Taviraj&family=DM+Serif+Text&family=Kanit&display=swap">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="/static/css/root.css">
-	<link rel="stylesheet" href="/static/css/main.css">
+	<link href="/static/css/root.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="/static/css/home.css">
-	<link rel="stylesheet" href="/static/css/services.css">
-	<link rel="stylesheet" href="/static/css/chemical.css">
-	<link rel="stylesheet" href="/static/css/works.css">
-	<link rel="stylesheet" href="/static/css/contact.css">
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer async></script>
+
 
 	<!-- Favicon -->
 	<meta name="msapplication-TileColor" content="#FFFFFF">
@@ -60,69 +64,45 @@ $description = CoolingHeader::getDescription();
 <body>
 
 <!-- Navigation -->
-<div class="header-wrapper">
-	<header class="logo">
-		<button id="mobileNavigationButton" class="collapse-button" title="เปิดเมนู">
-			<img class="icon icon-dark" src="/static/svgs/bars.svg" alt="ไอคอนเปิดเมนู">
+<nav class="navbar navbar-dark sticky-top navbar-expand-lg bg-dark">
+	<div class="container-md">
+		<a class="navbar-brand display-1" href="/home">kobcooling.com</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbar"
+			aria-controls="navbar"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		><span class="navbar-toggler-icon"></span>
 		</button>
-		<a href="/home" class="logo-text">
-			<span class="main"><span class="colon">:</span>coolingbykob.com</span>
-			<span class="sub">cooling tower, services</span>
-		</a>
-		<div class="logo-contact">โทร 085-982-3898 คุณกบ</div>
-	</header>
-	<nav class="nav">
-		<ul>
-			<li class="nav-item"><a class="js-nav-button" href="/home" title="หน้าหลัก">หน้าหลัก</a></li>
-			<li class="nav-item"><a class="js-nav-button" href="/products" title="สินค้า">สินค้า</a></li>
-			<li class="nav-item"><a class="js-nav-button" href="/services" title="บริการ">บริการ</a></li>
-			<li class="nav-item"><a class="js-nav-button" href="/chemical" title="เคมีภัณฑ์">เคมีภัณฑ์</a></li>
-			<li class="nav-item"><a class="js-nav-button" href="/works" title="ผลงาน">ผลงาน</a></li>
-			<li class="nav-item"><a class="js-nav-button" href="/contact" title="ติดต่อเรา">ติดต่อเรา</a></li>
-		</ul>
-	</nav>
-</div>
-<div id="mobileNavigationOverlay" class="mobile-nav-overlay"></div>
-<div id="mobileNavigation" class="mobile-nav-wrapper">
-	<nav class="mobile-nav">
-		<ul>
-			<li class="nav-item">
-				<a class="js-nav-button" href="/home" title="หน้าหลัก">
-					<img class="icon icon-dark icon-margin" src="/static/svgs/house.svg" alt="ไอคอนหน้าหลัก">หน้าหลัก
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="js-nav-button" href="/products" title="สินค้า">
-					<img class="icon icon-dark icon-margin" src="/static/svgs/box-open.svg" alt="ไอคอนหน้าหลัก">สินค้า
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="js-nav-button" href="/services" title="บริการ">
-					<img class="icon icon-dark icon-margin" src="/static/svgs/screwdriver-wrench.svg" alt="ไอคอนหน้าหลัก">บริการ
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="js-nav-button" href="/chemical" title="เคมีภัณฑ์">
-					<img class="icon icon-dark icon-margin" src="/static/svgs/flask-vial.svg" alt="ไอคอนเคมีภัณฑ์">เคมีภัณฑ์
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="js-nav-button" href="/works" title="ผลงาน">
-					<img class="icon icon-dark icon-margin" src="/static/svgs/images.svg" alt="ไอคอนหน้าหลัก">ผลงาน
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="js-nav-button" href="/contact" title="ติดต่อเรา">
-					<img class="icon icon-dark icon-margin" src="/static/svgs/address-card.svg" alt="ไอคอนหน้าหลัก">ติดต่อเรา
-				</a>
-			</li>
-		</ul>
-	</nav>
-	<footer class="mobile-nav-footer">
-		<div class="text">cooling tower, services</div>
-		<div class="contact">โทร 082-423-2132 คุณกบ</div>
-	</footer>
-</div>
+		<div class="collapse navbar-collapse" id="navbar">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/home">หน้าหลัก</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/products">สินค้า</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/services">บริการ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/chemicals">เคมีภัณฑ์</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/works">ผลงาน</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/contact">ติดต่อ</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
 <!-- Main -->
 <main class="main-body" id="main">
+<div class="container-md mt-2">
+<div class="row gy-2">

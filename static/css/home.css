@@ -3,30 +3,6 @@
  *--------------------------------*/
 
 /* Home Page */
-.main-cover {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("/static/images/cover.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-radius: 20px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-	width: 100%;
-}
-.main-cover {
-	backdrop-filter: blur(4px);
-	border-radius: 20px;
-	display: flex;
-	flex-direction: column;
-	padding: 20px 4%;
-	position: relative;
-}
-.main-cover > h1 {
-	color: var(--light);
-	padding-bottom: 10px;
-}
-.main-cover > p {
-	color: var(--light-gray);
-}
 
 /*--------------------------------*
  * Cooling tower type             *

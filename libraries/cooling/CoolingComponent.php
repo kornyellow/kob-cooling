@@ -24,7 +24,7 @@ class CoolingComponent {
 					</article>
 					<article>
 						<img class="img" src="/static/images/services/pipe_paint.jpg" alt="งานทำสีท่อน้ำ / ท่อคูลลิ่ง" title="งานทำสีท่อน้ำ / ท่อคูลลิ่ง">
-						<h3>งานทำสีท่อน้ำ / ท่อคูลลิ่ง</h3>
+						<h3>งานทำสีอีพ๊อกซี่</h3>
 					</article>
 					<article>
 						<img class="img" src="/static/images/services/circle_filling.jpg" alt="งานเปลี่ยนฟิลกลม" title="งานเปลี่ยนฟิลกลม">
