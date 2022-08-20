@@ -54,8 +54,11 @@ if (empty($absolutePath)) {
 }
 
 // Construct an entire page
-if (file_exists($requestFile))
+if (file_exists($requestFile)) {
 	include($requestFile);
-else
+}
+else {
+	http_response_code(404);
 	include('templates/cores/404.php');
+}
 include('templates/footer.php');

@@ -5,13 +5,17 @@ namespace contents;
 use libraries\korn\client\KornHeader;
 use libraries\cooling\CoolingComponent;
 
-KornHeader::constructHeader('สินค้า');
+KornHeader::constructHeader(
+	'สินค้า',
+	'คูลลิ่งทาวเวอร์ประเภทต่าง ๆ มีให้เลือกหลากหลาย ยกตัวอย่างเช่น ระบบดูดลมเข้าแบบไหลสวนทาง (แบบทรงกลม) ระบบดูดลมเข้าแบบไหลตัดขวาง (แบบทรงเหลี่ยม) ระบบเป่าลมเข้าแบบไหลสวนทางและระบบแบบปิด เพื่อพิจารณาตามความเหมาะสม เรามีให้บริการทั้งคูลลิ่งทาวเวอร์แบบมาตรฐาน และแบบที่ออกแบบตามความต้องการของที่ลูกค้ากำหนดเอง',
+	'หน้าแสดงสินค้าต่าง ๆ ของเรา'
+);
 
 ?>
 
 <div class="col-12">
 	<div class="card">
-		<h1 class="card-header">สินค้า</h1>
+		<h1 class="card-header bg-dark text-light">สินค้า</h1>
 		<div class="card-body">
 			<p>คูลลิ่งทาวเวอร์ประเภทต่าง ๆ มีให้เลือกหลากหลาย ยกตัวอย่างเช่น ระบบดูดลมเข้าแบบไหลสวนทาง (แบบทรงกลม) ระบบดูดลมเข้าแบบไหลตัดขวาง (แบบทรงเหลี่ยม) ระบบเป่าลมเข้าแบบไหลสวนทางและระบบแบบปิด เพื่อพิจารณาตามความเหมาะสม เรามีให้บริการทั้งคูลลิ่งทาวเวอร์แบบมาตรฐาน และแบบที่ออกแบบตามความต้องการของที่ลูกค้ากำหนดเอง</p>
 			<div class="card">
@@ -62,7 +66,7 @@ KornHeader::constructHeader('สินค้า');
 
 <div class="col-12">
 	<div class="card">
-		<h2 class="card-header">อะไหล่และอุปกรณ์</h2>
+		<h2 class="card-header bg-dark text-light">อะไหล่และอุปกรณ์</h2>
 		<div class="card-body">
 			<div class="row gx-1">
 				<div class="col-6 col-sm-4 col-xl-2">

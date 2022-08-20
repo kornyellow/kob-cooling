@@ -5,13 +5,17 @@ namespace contents;
 use libraries\korn\client\KornHeader;
 use libraries\cooling\CoolingComponent;
 
-KornHeader::constructHeader('บริการ');
+KornHeader::constructHeader(
+	'บริการ',
+	'เรามีบริการในการซ่อมแซม เปลี่ยนอะไหล่ และปรับปรุง คูลลิ่งทาวเวอร์ เรามีอะไหล่คูลลิ่งทาวเวอร์ของทุกรุ่นของทุกยี่ห้อ สำหรับไว้ให้บริการ ทีมงานของเรายินดีเข้าไปตรวจเช็คที่หน้างานและประเมินราคา ให้กับลูกค้า',
+	'หน้าแสดงบริการหลักต่าง ๆ'
+);
 
 ?>
 
 <div class="col-12">
 	<div class="card">
-		<h1 class="card-header">บริการหลักของเรา</h1>
+		<h1 class="card-header bg-dark text-light">บริการหลักของเรา</h1>
 		<div class="card-body">
 			<p class="card-text">เรามีบริการในการซ่อมแซม เปลี่ยนอะไหล่ และปรับปรุง คูลลิ่งทาวเวอร์ เรามีอะไหล่คูลลิ่งทาวเวอร์ของทุกรุ่นของทุกยี่ห้อ สำหรับไว้ให้บริการ ทีมงานของเรายินดีเข้าไปตรวจเช็คที่หน้างานและประเมินราคา ให้กับลูกค้า</p>
 			<div class="row gx-1">
@@ -58,7 +62,7 @@ KornHeader::constructHeader('บริการ');
 
 <div class="col-12">
 	<div class="card">
-		<h2 class="card-header">ขอบข่ายบริการ</h2>
+		<h2 class="card-header bg-dark text-light">ขอบข่ายบริการ</h2>
 		<div class="card-body">
 			<div class="row gy-2">
 				<div class="col-12">

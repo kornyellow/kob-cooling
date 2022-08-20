@@ -2,9 +2,10 @@
 
 namespace templates\cores;
 
-use libraries\cooling\CoolingHeader;
+use libraries\korn\client\KornHeader;
 
-CoolingHeader::constructHeader("ไม่พบหน้าดังกล่าว");
+KornHeader::constructHeader("ไม่พบหน้าดังกล่าว");
+
 ?>
 
 <div class="col-12">

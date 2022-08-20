@@ -5,13 +5,17 @@ namespace contents;
 use libraries\korn\client\KornHeader;
 use libraries\cooling\CoolingComponent;
 
-KornHeader::constructHeader('เคมีภัณฑ์');
+KornHeader::constructHeader(
+	'เคมีภัณฑ์',
+	'เคมีภัณฑ์ ผลิตและจำหน่าย จารบี น้ำมัน สเปรย์ เคมีน้ำยาในระบบคูลลิ่งทาวเวอร์ บอยเล่อร์ ซิลเลอร์',
+	'หน้าผลิตภัณฑ์เคมี ผลิตและจำหน่าย'
+);
 
 ?>
 
 <div class="col-12">
 	<div class="card">
-		<h1 class="card-header">เคมีภัณฑ์</h1>
+		<h1 class="card-header bg-dark text-light">เคมีภัณฑ์</h1>
 		<div class="card-body">
 			<p class="card-text">เคมีภัณฑ์ ผลิตและจำหน่าย จารบี น้ำมัน สเปรย์ เคมีน้ำยาในระบบคูลลิ่งทาวเวอร์ บอยเล่อร์ ซิลเลอร์</p>
 			<div class="row gx-3 gx-xl-5">

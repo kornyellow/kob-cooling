@@ -8,6 +8,9 @@ use libraries\cooling\CoolingComponent;
 KornHeader::constructHeader('ผลงาน');
 
 $works = [
+	['งานติดตั้งคูลลิ่งกลม', 'cooling-circle-install', 4],
+	['งานติดตั้งคูลลิ่งเหลี่ยม', 'cooling-square-install', 6],
+	['งานติดตั้งฮูต', 'hood-install', 4],
 	['งานเปลี่ยนโครงสร้างช่วงล่างคูลลิ่ง', 'lower-part-cooling', 4],
 	['งานโอเวอร์ฮอนมอเตอร์คูลลิ่ง', 'overhorn-motor-cooling', 6],
 	['งานเปลี่ยนท่อน้ำคูลลิ่ง', 'change-water-pipe', 4],
@@ -79,7 +82,7 @@ function renderWorks($works): string {
 
 <div class="col-12">
 	<div class="card">
-		<h1 class="card-header">ผลงาน</h1>
+		<h1 class="card-header bg-dark text-light">ผลงาน</h1>
 		<div class="card-body">
 			<p class="card-text">ชำนาญด้านการผลิตคูลลิ่งทาวเวอร์ และบริการที่เป็นเลิศ บริการด้านการล้างคูลลิ่งทาวเวอร์ และงานซ่อมบำรุง งานระบบต่าง ๆ เปลี่ยนอะไหล่ ซ่อมแซมคูลลิ่งทาวเวอร์ โดยทีมช่างและวิศวกรผู้ชำนาญการเป็นเวลานับ 10 ปี ทางเรายินดีและพร้อมให้บริการท่านทุกที่ทุกเวลา</p>
 			<div class="row gy-3"><?php echo renderWorks($works) ?></div>
