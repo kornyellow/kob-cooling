@@ -5,7 +5,7 @@ namespace contents;
 use libraries\korn\client\KornHeader;
 use libraries\cooling\CoolingComponent;
 
-KornHeader::constructHeader("ติดต่อเรา");
+KornHeader::constructHeader('ติดต่อเรา');
 ?>
 
 <div class="col-12">

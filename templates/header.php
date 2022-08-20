@@ -56,6 +56,8 @@ use libraries\korn\client\KornHeader;
 
 <body>
 
+<script>0</script>
+
 <!-- Navigation -->
 <nav class="navbar navbar-dark sticky-top navbar-expand-lg bg-dark">
 	<div class="container-md">
