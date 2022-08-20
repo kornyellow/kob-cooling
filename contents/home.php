@@ -2,10 +2,11 @@
 
 namespace contents;
 
-use libraries\cooling\CoolingHeader;
+use libraries\korn\client\KornHeader;
 use libraries\cooling\CoolingComponent;
 
-CoolingHeader::constructHeader();
+KornHeader::constructHeader();
+
 ?>
 
 <div class="col-12">

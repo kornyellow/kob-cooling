@@ -1,6 +1,6 @@
 <?php
 
-use libraries\korn\KornNetwork;
+use libraries\korn\utils\KornNetwork;
 
 // Make errors visible
 ini_set('display_errors', 1);

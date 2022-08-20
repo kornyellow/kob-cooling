@@ -2,18 +2,8 @@
 
 namespace templates;
 
-use libraries\cooling\CoolingHeader;
+use libraries\korn\client\KornHeader;
 
-$title       = CoolingHeader::getTitle();
-$abstract    = CoolingHeader::getAbstract();
-$description = CoolingHeader::getDescription();
-
-if ($title !== 'หน้าหลัก') {
-	$title .= ' · คูลลิ่งทาวเวอร์';
-}
-else {
-	$title = 'คูลลิ่งทาวเวอร์';
-}
 ?>
 
 <!DOCTYPE html>
@@ -23,15 +13,15 @@ else {
 	<!-- Metas -->
 	<meta charset="utf-8">
 
-	<title><?php echo $title ?></title>
+	<title><?php echo KornHeader::getTitle() ?></title>
 
-	<meta name="title" content="<?php echo $title ?> · กบคูลลิ่งทาวเวอร์ และบริการ">
-	<meta name="author" content="สุคนธ์ สุโขพล (กบ)">
-	<meta name="owner" content="kornkubzaza@gmail.com">
+	<meta name="title" content="<?php echo KornHeader::getTitle() ?>">
+	<meta name="author" content="<?php echo KornHeader::getAuthor() ?>">
+	<meta name="owner" content="<?php echo KornHeader::getOwner() ?>">
 
-	<meta name="keywords" content="คูลลิ่งทาวเวอร์,คูลลิ่งทาวเวอร์ทรงกลม ทรงเหลี่ยม,หอระบายความร้อน,ติดตั้งเครื่องคูลลิ่งทาวเวอร์,ซ่อมคูลลิ่งทาวเวอร์,ระบบหล่อเย็น ระบบระบายความร้อน,กบคูลลิ่ง,กบ,กรุงเทพมหานคร">
-	<meta name="abstract" content="<?php echo $abstract ?>">
-	<meta name="description" content="<?php echo $description ?>">
+	<meta name="description" content="<?php echo KornHeader::getDescription() ?>">
+	<meta name="abstract" content="<?php echo KornHeader::getAbstract() ?>">
+	<meta name="keywords" content="<?php echo KornHeader::getKeywords() ?>">
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
