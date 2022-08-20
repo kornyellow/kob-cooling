@@ -100,10 +100,10 @@
 }
 
 /*--------------------------------*
- * Navigation                     *
+ * Script                     *
  *--------------------------------*/
 
-/* Header Navigation Bar */
+/* Header Script Bar */
 .header-wrapper > nav {
 	align-items: center;
 	display: none;
@@ -139,7 +139,7 @@
 .header-wrapper > .nav .nav-item > :not(.active):hover {
 }
 
-/* Mobile Navigation */
+/* Mobile Script */
 .mobile-nav-wrapper {
 	background-color: var(--light);
 	border-radius: 0 20px 20px 0;

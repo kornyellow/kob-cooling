@@ -8,10 +8,14 @@ use libraries\cooling\CoolingComponent;
 CoolingHeader::constructHeader("ติดต่อเรา");
 ?>
 
-<section class="main-cover">
-	<h1><img class="icon icon-light icon-margin" src="/static/svgs/address-card.svg" alt="ไอคอนติดต่อเรา">ติดต่อเรา</h1>
-	<p>หากสนใจหรือมีคำถาม คุณลูกค้าสามารถติดต่อมาได้ในช่องทางดังกล่าว coolingbykob.com ยินดีให้บริการทุก ๆ คน</p>
-</section>
+<div class="col-12">
+	<div class="card">
+		<h1 class="card-header">ติดต่อเรา</h1>
+		<div class="card-body">
+			<p class="card-text">หากสนใจหรือมีคำถาม คุณลูกค้าสามารถติดต่อมาได้ในช่องทางดังกล่าว kobcooling.com ยินดีให้บริการทุก ๆ คน</p>
+		</div>
+	</div>
+</div>
 
 <?php
 CoolingComponent::contact();

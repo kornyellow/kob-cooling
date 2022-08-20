@@ -34,12 +34,13 @@ if (str_ends_with($absolutePath, 'index.php')) {
 // Find a requested file
 $requestFile = KornNetwork::getDocumentRoot().'/contents/';
 
-if (empty($absolutePath))
+if (empty($absolutePath)) {
 	$requestFile .= 'home.php';
-else if (!file_exists($requestFile.$absolutePath.'.php'))
+} else if (!file_exists($requestFile.$absolutePath.'.php')) {
 	$requestFile .= $absolutePath.'/index.php';
-else
+} else {
 	$requestFile .= $absolutePath.'.php';
+}
 
 // Construct an entire page
 if (file_exists($requestFile))
