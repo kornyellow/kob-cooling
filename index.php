@@ -1,6 +1,7 @@
 <?php
 
 use libraries\korn\utils\KornNetwork;
+use libraries\korn\utils\KornConfig;
 
 // Make errors visible
 ini_set('display_errors', 1);
@@ -12,6 +13,12 @@ date_default_timezone_set('Asia/Bangkok');
 
 // Libraries for autoload classes
 include('vendor/autoload.php');
+
+// Config header
+KornConfig::$websiteName = 'คูลลิ่งทาวเวอร์';
+KornConfig::$defaultDescription = 'จำหน่าย ออกแบบ ผลิต ติดตั้ง Cooling Tower ทุกแบบ คุณภาพมาตรฐาน โดยวิศวกรผู้เชี่ยวชาญ ทีมงานของเรายินดี เข้าไปตรวจเช็คที่หน้างาน ประเมินราคาฟรี พร้อมบริการหลังการขาย';
+KornConfig::$defaultAbstract = 'หน้าหลักแสดงเนื้อหาเกี่ยวกับรายละเอียดคูลลิ่งทาวเวอร์';
+KornConfig::$defaultKeywords = 'คูลลิ่งทาวเวอร์,คูลลิ่งทาวเวอร์ทรงกลม ทรงเหลี่ยม,หอระบายความร้อน,ติดตั้งเครื่องคูลลิ่งทาวเวอร์,ซ่อมคูลลิ่งทาวเวอร์,ระบบหล่อเย็น ระบบระบายความร้อน,กบคูลลิ่ง,กบ,กรุงเทพมหานคร';
 
 // Start Sessions
 session_start();
