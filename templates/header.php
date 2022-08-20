@@ -52,6 +52,9 @@ use libraries\korn\client\KornHeader;
 	<link rel="shortcut icon" href="/static/favicons/favicon.ico">
 
 	<link rel="manifest" href="/static/favicons/site.webmanifest">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="<?php echo KornHeader::getCanonical() ?>">
 </head>
 
 <body>

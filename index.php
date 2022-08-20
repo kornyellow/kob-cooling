@@ -1,6 +1,7 @@
 <?php
 
 use libraries\korn\utils\KornNetwork;
+use libraries\korn\client\KornHeader;
 use libraries\korn\KornConfig;
 
 // Make errors visible
@@ -37,6 +38,9 @@ if (str_ends_with($absolutePath, 'index.php')) {
 	$absolutePath = substr($absolutePath, 0, -9);
 	KornNetwork::redirectPage($currentDomainURL.'/'.$absolutePath);
 }
+
+// Set Canonical URL
+KornHeader::setCanonical($absolutePath);
 
 // Find a requested file
 $requestFile = KornNetwork::getDocumentRoot().'/contents/';
