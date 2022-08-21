@@ -54,7 +54,7 @@ use libraries\korn\client\KornHeader;
 	<link rel="manifest" href="/static/favicons/site.webmanifest">
 
 	<!-- Canonical -->
-	<link rel="canonical" href="<?php echo KornHeader::getCanonical() ?>">
+	<link rel="canonical" href="https://kobcooling.com/<?php echo KornHeader::getCanonical() ?>">
 </head>
 
 <body>
